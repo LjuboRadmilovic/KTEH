@@ -1,0 +1,81 @@
+.igra__zaglavlje {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: var(--razmak-4);
+  flex-wrap: wrap;
+  margin-bottom: var(--razmak-6);
+}
+
+.igra__oznake { display: flex; gap: var(--razmak-2); flex-wrap: wrap; margin-top: var(--razmak-2); }
+
+.oznaka {
+  font-size: var(--slova-xs);
+  padding: 4px 10px;
+  border-radius: var(--radijus-pun);
+  border: 1px solid var(--ivica-tanka);
+  background: var(--pozadina-uneseno);
+  color: var(--tekst-sekundarni);
+}
+
+.igra__tajmer {
+  font-size: 30px;
+  font-weight: var(--debljina-debela);
+  font-variant-numeric: tabular-nums;
+  color: var(--tekst-primarni);
+  text-align: right;
+  line-height: 1.1;
+}
+.igra__tajmer small { display: block; font-size: 11px; font-weight: var(--debljina-obicna); letter-spacing: 0.14em; text-transform: uppercase; color: var(--tekst-prigusen); }
+
+.igra__igraci {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--razmak-4);
+  margin-bottom: var(--razmak-6);
+}
+
+.igra__dno {
+  display: flex;
+  justify-content: center;
+  gap: var(--razmak-3);
+  margin-top: var(--razmak-8);
+  flex-wrap: wrap;
+}
+
+/* ---- priprema partije ---- */
+.priprema {
+  max-width: 460px;
+  margin: 0 auto;
+}
+
+.priprema__forma { display: flex; flex-direction: column; gap: var(--razmak-5); margin-top: var(--razmak-6); }
+
+.priprema__opis { color: var(--tekst-sekundarni); font-size: var(--slova-s); }
+
+.priprema__podaci {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--razmak-3);
+  margin-top: var(--razmak-5);
+  padding-top: var(--razmak-5);
+  border-top: 1px solid var(--ivica-tanka);
+}
+
+.priprema__podatak { display: flex; flex-direction: column; gap: 2px; }
+.priprema__oznaka { font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--tekst-prigusen); }
+.priprema__vrednost { font-weight: var(--debljina-polu); }
+
+.igra__greska {
+  border: 1px solid var(--status-greska-tamna);
+  background: rgba(248, 113, 113, 0.08);
+  color: var(--status-greska);
+  border-radius: var(--radijus-m);
+  padding: var(--razmak-4);
+  margin-bottom: var(--razmak-6);
+}
+
+@media (max-width: 640px) {
+  .igra__igraci { grid-template-columns: 1fr; gap: var(--razmak-3); }
+  .igra__tajmer { text-align: left; }
+}
