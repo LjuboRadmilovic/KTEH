@@ -1,0 +1,57 @@
+.rezultat {
+  max-width: 720px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.rezultat__ishod {
+  font-size: clamp(28px, 5vw, 44px);
+  font-weight: var(--debljina-vrlo-debela);
+  line-height: 1.1;
+  margin-bottom: var(--razmak-3);
+}
+.rezultat__ishod span { background: var(--gradijent-akcenat); -webkit-background-clip: text; background-clip: text; color: transparent; }
+
+.rezultat__podnaslov { color: var(--tekst-sekundarni); margin-bottom: var(--razmak-10); }
+
+.rezultat__igraci {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--razmak-4);
+  text-align: left;
+  margin-bottom: var(--razmak-6);
+}
+
+.rezultat__sazetak {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--razmak-4);
+  margin-bottom: var(--razmak-10);
+}
+
+.sazetak__stavka {
+  background: var(--pozadina-povrsina);
+  border: 1px solid var(--ivica-tanka);
+  border-radius: var(--radijus-l);
+  padding: var(--razmak-5);
+}
+
+.sazetak__vrednost {
+  font-size: 26px;
+  font-weight: var(--debljina-debela);
+  font-variant-numeric: tabular-nums;
+  display: block;
+}
+
+.sazetak__oznaka {
+  font-size: 10px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--tekst-prigusen);
+}
+
+.rezultat__akcije { display: flex; gap: var(--razmak-3); justify-content: center; flex-wrap: wrap; }
+
+@media (max-width: 640px) {
+  .rezultat__igraci, .rezultat__sazetak { grid-template-columns: 1fr; }
+}
