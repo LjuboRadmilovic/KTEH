@@ -1,0 +1,1328 @@
+{
+  "verzija": "1.0",
+  "naziv": "Memorija — paketi pojmova i nivoi",
+  "opis": "Podaci za igru memorije. Paketi 'psi' i 'pokemoni' primarno povlace podatke sa javnih API-ja; ako API nije dostupan koriste se rezervni pojmovi iz ovog fajla. Ostali paketi se u celini citaju odavde.",
+  "pravila": {
+    "vracanjeKarticaMs": 800,
+    "pogodakDajeNoviPotez": true,
+    "brojIgraca": 2,
+    "mesanje": "Fisher-Yates"
+  },
+  "tezine": [
+    {
+      "kod": "lako",
+      "naziv": "Lako",
+      "boja": "#34D399"
+    },
+    {
+      "kod": "srednje",
+      "naziv": "Srednje",
+      "boja": "#FBBF24"
+    },
+    {
+      "kod": "tesko",
+      "naziv": "Tesko",
+      "boja": "#F87171"
+    }
+  ],
+  "paketi": [
+    {
+      "id": "psi",
+      "naziv": "Psi",
+      "opis": "Rase pasa. Slike se povlace sa Dog CEO API-ja, a naziv rase se izvlaci iz adrese slike.",
+      "emoji": "🐕",
+      "boja": "#8B5CF6",
+      "izvor": {
+        "tip": "api",
+        "naziv": "Dog CEO API",
+        "url": "https://dog.ceo/api/breeds/image/random/{broj}",
+        "kljucNijePotreban": true
+      },
+      "rezervniPojmovi": [
+        {
+          "id": "bigl",
+          "naziv": "Bigl",
+          "emoji": "🐕"
+        },
+        {
+          "id": "pudla",
+          "naziv": "Pudla",
+          "emoji": "🐩"
+        },
+        {
+          "id": "labrador",
+          "naziv": "Labrador",
+          "emoji": "🦮"
+        },
+        {
+          "id": "nemacki-ovcar",
+          "naziv": "Nemacki ovcar",
+          "emoji": "🐕‍🦺"
+        },
+        {
+          "id": "mops",
+          "naziv": "Mops",
+          "emoji": "🐶"
+        },
+        {
+          "id": "haski",
+          "naziv": "Haski",
+          "emoji": "🐺"
+        },
+        {
+          "id": "buldog",
+          "naziv": "Buldog",
+          "emoji": "🐶"
+        },
+        {
+          "id": "corgi",
+          "naziv": "Corgi",
+          "emoji": "🐕"
+        },
+        {
+          "id": "dalmatinac",
+          "naziv": "Dalmatinac",
+          "emoji": "🐕"
+        },
+        {
+          "id": "cau-cau",
+          "naziv": "Cau cau",
+          "emoji": "🐕"
+        },
+        {
+          "id": "bokser",
+          "naziv": "Bokser",
+          "emoji": "🐕"
+        },
+        {
+          "id": "bison",
+          "naziv": "Bison",
+          "emoji": "🐩"
+        },
+        {
+          "id": "doberman",
+          "naziv": "Doberman",
+          "emoji": "🐕‍🦺"
+        },
+        {
+          "id": "terijer",
+          "naziv": "Terijer",
+          "emoji": "🐕"
+        },
+        {
+          "id": "seter",
+          "naziv": "Seter",
+          "emoji": "🦮"
+        },
+        {
+          "id": "samojed",
+          "naziv": "Samojed",
+          "emoji": "🐺"
+        },
+        {
+          "id": "sarpej",
+          "naziv": "Sarpej",
+          "emoji": "🐶"
+        },
+        {
+          "id": "vizla",
+          "naziv": "Vizla",
+          "emoji": "🦮"
+        },
+        {
+          "id": "akita",
+          "naziv": "Akita",
+          "emoji": "🐺"
+        },
+        {
+          "id": "bernardinac",
+          "naziv": "Bernardinac",
+          "emoji": "🐕"
+        },
+        {
+          "id": "malteser",
+          "naziv": "Malteser",
+          "emoji": "🐩"
+        },
+        {
+          "id": "kolije",
+          "naziv": "Kolije",
+          "emoji": "🐕‍🦺"
+        },
+        {
+          "id": "pointer",
+          "naziv": "Pointer",
+          "emoji": "🦮"
+        },
+        {
+          "id": "ceska-ovcarka",
+          "naziv": "Ceska ovcarka",
+          "emoji": "🐕‍🦺"
+        },
+        {
+          "id": "cihuahua",
+          "naziv": "Cihuahua",
+          "emoji": "🐶"
+        },
+        {
+          "id": "siba",
+          "naziv": "Siba",
+          "emoji": "🐺"
+        },
+        {
+          "id": "rotvajler",
+          "naziv": "Rotvajler",
+          "emoji": "🐕‍🦺"
+        },
+        {
+          "id": "kokerspanijel",
+          "naziv": "Kokerspanijel",
+          "emoji": "🐕"
+        },
+        {
+          "id": "vipet",
+          "naziv": "Vipet",
+          "emoji": "🦮"
+        },
+        {
+          "id": "bigl-harijer",
+          "naziv": "Bigl harijer",
+          "emoji": "🐕"
+        },
+        {
+          "id": "pekinezer",
+          "naziv": "Pekinezer",
+          "emoji": "🐶"
+        },
+        {
+          "id": "papilon",
+          "naziv": "Papilon",
+          "emoji": "🐩"
+        }
+      ]
+    },
+    {
+      "id": "pokemoni",
+      "naziv": "Pokemoni",
+      "opis": "Pokemoni sa imenima i slikama. Podaci se povlace sa PokeAPI-ja.",
+      "emoji": "⚡",
+      "boja": "#FBBF24",
+      "izvor": {
+        "tip": "api",
+        "naziv": "PokeAPI",
+        "url": "https://pokeapi.co/api/v2/pokemon?limit={broj}&offset={pomeraj}",
+        "kljucNijePotreban": true
+      },
+      "rezervniPojmovi": [
+        {
+          "id": "pikacu",
+          "naziv": "Pikacu",
+          "emoji": "⚡"
+        },
+        {
+          "id": "carmander",
+          "naziv": "Carmander",
+          "emoji": "🔥"
+        },
+        {
+          "id": "skvirtl",
+          "naziv": "Skvirtl",
+          "emoji": "💧"
+        },
+        {
+          "id": "bulbasaur",
+          "naziv": "Bulbasaur",
+          "emoji": "🌿"
+        },
+        {
+          "id": "ivi",
+          "naziv": "Ivi",
+          "emoji": "🦊"
+        },
+        {
+          "id": "snorlaks",
+          "naziv": "Snorlaks",
+          "emoji": "😴"
+        },
+        {
+          "id": "dzigliraf",
+          "naziv": "Dzigliraf",
+          "emoji": "🎈"
+        },
+        {
+          "id": "meout",
+          "naziv": "Meout",
+          "emoji": "😺"
+        },
+        {
+          "id": "psajdak",
+          "naziv": "Psajdak",
+          "emoji": "🦆"
+        },
+        {
+          "id": "mahamp",
+          "naziv": "Mahamp",
+          "emoji": "💪"
+        },
+        {
+          "id": "gengar",
+          "naziv": "Gengar",
+          "emoji": "👻"
+        },
+        {
+          "id": "onix",
+          "naziv": "Onix",
+          "emoji": "🪨"
+        },
+        {
+          "id": "lapras",
+          "naziv": "Lapras",
+          "emoji": "🌊"
+        },
+        {
+          "id": "ditto",
+          "naziv": "Ditto",
+          "emoji": "🫧"
+        },
+        {
+          "id": "eevee",
+          "naziv": "Eevee",
+          "emoji": "🐾"
+        },
+        {
+          "id": "mju",
+          "naziv": "Mju",
+          "emoji": "✨"
+        },
+        {
+          "id": "zubat",
+          "naziv": "Zubat",
+          "emoji": "🦇"
+        },
+        {
+          "id": "geodud",
+          "naziv": "Geodud",
+          "emoji": "🪨"
+        },
+        {
+          "id": "abra",
+          "naziv": "Abra",
+          "emoji": "🔮"
+        },
+        {
+          "id": "alakazam",
+          "naziv": "Alakazam",
+          "emoji": "🥄"
+        },
+        {
+          "id": "magnemajt",
+          "naziv": "Magnemajt",
+          "emoji": "🧲"
+        },
+        {
+          "id": "voltorb",
+          "naziv": "Voltorb",
+          "emoji": "🔴"
+        },
+        {
+          "id": "kabuto",
+          "naziv": "Kabuto",
+          "emoji": "🐚"
+        },
+        {
+          "id": "aerodaktil",
+          "naziv": "Aerodaktil",
+          "emoji": "🦕"
+        },
+        {
+          "id": "dragonajt",
+          "naziv": "Dragonajt",
+          "emoji": "🐉"
+        },
+        {
+          "id": "articuno",
+          "naziv": "Articuno",
+          "emoji": "❄️"
+        },
+        {
+          "id": "zapdos",
+          "naziv": "Zapdos",
+          "emoji": "🌩️"
+        },
+        {
+          "id": "moltres",
+          "naziv": "Moltres",
+          "emoji": "🔥"
+        },
+        {
+          "id": "mjutu",
+          "naziv": "Mjutu",
+          "emoji": "🧠"
+        },
+        {
+          "id": "farfec",
+          "naziv": "Farfec",
+          "emoji": "🦢"
+        },
+        {
+          "id": "tauros",
+          "naziv": "Tauros",
+          "emoji": "🐂"
+        },
+        {
+          "id": "lickitung",
+          "naziv": "Lickitung",
+          "emoji": "👅"
+        }
+      ]
+    },
+    {
+      "id": "zastave",
+      "naziv": "Zastave",
+      "opis": "Zastave drzava sveta. Slike i nazivi se povlace sa REST Countries API-ja; ako API nije dostupan koriste se rezervni pojmovi iz ovog fajla.",
+      "emoji": "🚩",
+      "boja": "#22D3EE",
+      "izvor": {
+        "tip": "api",
+        "naziv": "REST Countries",
+        "url": "https://restcountries.com/v3.1/independent?status=true&fields=name,cca2,flags",
+        "kljucNijePotreban": true
+      },
+      "rezervniPojmovi": [
+        {
+          "id": "srbija",
+          "naziv": "Srbija",
+          "emoji": "🇷🇸"
+        },
+        {
+          "id": "nemacka",
+          "naziv": "Nemacka",
+          "emoji": "🇩🇪"
+        },
+        {
+          "id": "francuska",
+          "naziv": "Francuska",
+          "emoji": "🇫🇷"
+        },
+        {
+          "id": "italija",
+          "naziv": "Italija",
+          "emoji": "🇮🇹"
+        },
+        {
+          "id": "spanija",
+          "naziv": "Spanija",
+          "emoji": "🇪🇸"
+        },
+        {
+          "id": "japan",
+          "naziv": "Japan",
+          "emoji": "🇯🇵"
+        },
+        {
+          "id": "brazil",
+          "naziv": "Brazil",
+          "emoji": "🇧🇷"
+        },
+        {
+          "id": "kanada",
+          "naziv": "Kanada",
+          "emoji": "🇨🇦"
+        },
+        {
+          "id": "argentina",
+          "naziv": "Argentina",
+          "emoji": "🇦🇷"
+        },
+        {
+          "id": "australija",
+          "naziv": "Australija",
+          "emoji": "🇦🇺"
+        },
+        {
+          "id": "egipat",
+          "naziv": "Egipat",
+          "emoji": "🇪🇬"
+        },
+        {
+          "id": "indija",
+          "naziv": "Indija",
+          "emoji": "🇮🇳"
+        },
+        {
+          "id": "kina",
+          "naziv": "Kina",
+          "emoji": "🇨🇳"
+        },
+        {
+          "id": "meksiko",
+          "naziv": "Meksiko",
+          "emoji": "🇲🇽"
+        },
+        {
+          "id": "norveska",
+          "naziv": "Norveska",
+          "emoji": "🇳🇴"
+        },
+        {
+          "id": "portugal",
+          "naziv": "Portugal",
+          "emoji": "🇵🇹"
+        },
+        {
+          "id": "grcka",
+          "naziv": "Grcka",
+          "emoji": "🇬🇷"
+        },
+        {
+          "id": "turska",
+          "naziv": "Turska",
+          "emoji": "🇹🇷"
+        },
+        {
+          "id": "poljska",
+          "naziv": "Poljska",
+          "emoji": "🇵🇱"
+        },
+        {
+          "id": "holandija",
+          "naziv": "Holandija",
+          "emoji": "🇳🇱"
+        },
+        {
+          "id": "svedska",
+          "naziv": "Svedska",
+          "emoji": "🇸🇪"
+        },
+        {
+          "id": "finska",
+          "naziv": "Finska",
+          "emoji": "🇫🇮"
+        },
+        {
+          "id": "irska",
+          "naziv": "Irska",
+          "emoji": "🇮🇪"
+        },
+        {
+          "id": "island",
+          "naziv": "Island",
+          "emoji": "🇮🇸"
+        },
+        {
+          "id": "hrvatska",
+          "naziv": "Hrvatska",
+          "emoji": "🇭🇷"
+        },
+        {
+          "id": "slovenija",
+          "naziv": "Slovenija",
+          "emoji": "🇸🇮"
+        },
+        {
+          "id": "madjarska",
+          "naziv": "Madjarska",
+          "emoji": "🇭🇺"
+        },
+        {
+          "id": "rumunija",
+          "naziv": "Rumunija",
+          "emoji": "🇷🇴"
+        },
+        {
+          "id": "bugarska",
+          "naziv": "Bugarska",
+          "emoji": "🇧🇬"
+        },
+        {
+          "id": "austrija",
+          "naziv": "Austrija",
+          "emoji": "🇦🇹"
+        },
+        {
+          "id": "svajcarska",
+          "naziv": "Svajcarska",
+          "emoji": "🇨🇭"
+        },
+        {
+          "id": "belgija",
+          "naziv": "Belgija",
+          "emoji": "🇧🇪"
+        }
+      ]
+    },
+    {
+      "id": "voce",
+      "naziv": "Voce i povrce",
+      "opis": "Voce i povrce. Pojmovi se citaju iz ovog JSON fajla.",
+      "emoji": "🍎",
+      "boja": "#34D399",
+      "izvor": {
+        "tip": "json",
+        "naziv": "Lokalni JSON paket"
+      },
+      "rezervniPojmovi": [
+        {
+          "id": "jabuka",
+          "naziv": "Jabuka",
+          "emoji": "🍎"
+        },
+        {
+          "id": "kruska",
+          "naziv": "Kruska",
+          "emoji": "🍐"
+        },
+        {
+          "id": "banana",
+          "naziv": "Banana",
+          "emoji": "🍌"
+        },
+        {
+          "id": "jagoda",
+          "naziv": "Jagoda",
+          "emoji": "🍓"
+        },
+        {
+          "id": "visnja",
+          "naziv": "Visnja",
+          "emoji": "🍒"
+        },
+        {
+          "id": "breskva",
+          "naziv": "Breskva",
+          "emoji": "🍑"
+        },
+        {
+          "id": "grozdje",
+          "naziv": "Grozdje",
+          "emoji": "🍇"
+        },
+        {
+          "id": "lubenica",
+          "naziv": "Lubenica",
+          "emoji": "🍉"
+        },
+        {
+          "id": "dinja",
+          "naziv": "Dinja",
+          "emoji": "🍈"
+        },
+        {
+          "id": "ananas",
+          "naziv": "Ananas",
+          "emoji": "🍍"
+        },
+        {
+          "id": "kokos",
+          "naziv": "Kokos",
+          "emoji": "🥥"
+        },
+        {
+          "id": "limun",
+          "naziv": "Limun",
+          "emoji": "🍋"
+        },
+        {
+          "id": "pomorandza",
+          "naziv": "Pomorandza",
+          "emoji": "🍊"
+        },
+        {
+          "id": "mango",
+          "naziv": "Mango",
+          "emoji": "🥭"
+        },
+        {
+          "id": "kivi",
+          "naziv": "Kivi",
+          "emoji": "🥝"
+        },
+        {
+          "id": "avokado",
+          "naziv": "Avokado",
+          "emoji": "🥑"
+        },
+        {
+          "id": "paradajz",
+          "naziv": "Paradajz",
+          "emoji": "🍅"
+        },
+        {
+          "id": "paprika",
+          "naziv": "Paprika",
+          "emoji": "🫑"
+        },
+        {
+          "id": "krastavac",
+          "naziv": "Krastavac",
+          "emoji": "🥒"
+        },
+        {
+          "id": "sargarepa",
+          "naziv": "Sargarepa",
+          "emoji": "🥕"
+        },
+        {
+          "id": "kukuruz",
+          "naziv": "Kukuruz",
+          "emoji": "🌽"
+        },
+        {
+          "id": "krompir",
+          "naziv": "Krompir",
+          "emoji": "🥔"
+        },
+        {
+          "id": "luk",
+          "naziv": "Luk",
+          "emoji": "🧅"
+        },
+        {
+          "id": "beli-luk",
+          "naziv": "Beli luk",
+          "emoji": "🧄"
+        },
+        {
+          "id": "brokoli",
+          "naziv": "Brokoli",
+          "emoji": "🥦"
+        },
+        {
+          "id": "salata",
+          "naziv": "Salata",
+          "emoji": "🥬"
+        },
+        {
+          "id": "pecurka",
+          "naziv": "Pecurka",
+          "emoji": "🍄"
+        },
+        {
+          "id": "patlidzan",
+          "naziv": "Patlidzan",
+          "emoji": "🍆"
+        },
+        {
+          "id": "boranija",
+          "naziv": "Boranija",
+          "emoji": "🫛"
+        },
+        {
+          "id": "maslina",
+          "naziv": "Maslina",
+          "emoji": "🫒"
+        },
+        {
+          "id": "cvekla",
+          "naziv": "Cvekla",
+          "emoji": "🫜"
+        },
+        {
+          "id": "ljuta-papricica",
+          "naziv": "Ljuta papricica",
+          "emoji": "🌶️"
+        }
+      ]
+    },
+    {
+      "id": "zivotinje",
+      "naziv": "Zivotinje",
+      "opis": "Divlje i domace zivotinje. Pojmovi se citaju iz ovog JSON fajla.",
+      "emoji": "🦁",
+      "boja": "#F87171",
+      "izvor": {
+        "tip": "json",
+        "naziv": "Lokalni JSON paket"
+      },
+      "rezervniPojmovi": [
+        {
+          "id": "lav",
+          "naziv": "Lav",
+          "emoji": "🦁"
+        },
+        {
+          "id": "tigar",
+          "naziv": "Tigar",
+          "emoji": "🐯"
+        },
+        {
+          "id": "slon",
+          "naziv": "Slon",
+          "emoji": "🐘"
+        },
+        {
+          "id": "zirafa",
+          "naziv": "Zirafa",
+          "emoji": "🦒"
+        },
+        {
+          "id": "zebra",
+          "naziv": "Zebra",
+          "emoji": "🦓"
+        },
+        {
+          "id": "majmun",
+          "naziv": "Majmun",
+          "emoji": "🐒"
+        },
+        {
+          "id": "panda",
+          "naziv": "Panda",
+          "emoji": "🐼"
+        },
+        {
+          "id": "koala",
+          "naziv": "Koala",
+          "emoji": "🐨"
+        },
+        {
+          "id": "medved",
+          "naziv": "Medved",
+          "emoji": "🐻"
+        },
+        {
+          "id": "vuk",
+          "naziv": "Vuk",
+          "emoji": "🐺"
+        },
+        {
+          "id": "lisica",
+          "naziv": "Lisica",
+          "emoji": "🦊"
+        },
+        {
+          "id": "jelen",
+          "naziv": "Jelen",
+          "emoji": "🦌"
+        },
+        {
+          "id": "konj",
+          "naziv": "Konj",
+          "emoji": "🐴"
+        },
+        {
+          "id": "krava",
+          "naziv": "Krava",
+          "emoji": "🐄"
+        },
+        {
+          "id": "svinja",
+          "naziv": "Svinja",
+          "emoji": "🐖"
+        },
+        {
+          "id": "ovca",
+          "naziv": "Ovca",
+          "emoji": "🐑"
+        },
+        {
+          "id": "koza",
+          "naziv": "Koza",
+          "emoji": "🐐"
+        },
+        {
+          "id": "zec",
+          "naziv": "Zec",
+          "emoji": "🐇"
+        },
+        {
+          "id": "veverica",
+          "naziv": "Veverica",
+          "emoji": "🐿️"
+        },
+        {
+          "id": "jez",
+          "naziv": "Jez",
+          "emoji": "🦔"
+        },
+        {
+          "id": "sismis",
+          "naziv": "Sismis",
+          "emoji": "🦇"
+        },
+        {
+          "id": "sova",
+          "naziv": "Sova",
+          "emoji": "🦉"
+        },
+        {
+          "id": "orao",
+          "naziv": "Orao",
+          "emoji": "🦅"
+        },
+        {
+          "id": "pingvin",
+          "naziv": "Pingvin",
+          "emoji": "🐧"
+        },
+        {
+          "id": "delfin",
+          "naziv": "Delfin",
+          "emoji": "🐬"
+        },
+        {
+          "id": "kit",
+          "naziv": "Kit",
+          "emoji": "🐋"
+        },
+        {
+          "id": "ajkula",
+          "naziv": "Ajkula",
+          "emoji": "🦈"
+        },
+        {
+          "id": "hobotnica",
+          "naziv": "Hobotnica",
+          "emoji": "🐙"
+        },
+        {
+          "id": "rak",
+          "naziv": "Rak",
+          "emoji": "🦀"
+        },
+        {
+          "id": "zaba",
+          "naziv": "Zaba",
+          "emoji": "🐸"
+        },
+        {
+          "id": "zmija",
+          "naziv": "Zmija",
+          "emoji": "🐍"
+        },
+        {
+          "id": "kornjaca",
+          "naziv": "Kornjaca",
+          "emoji": "🐢"
+        }
+      ]
+    },
+    {
+      "id": "it",
+      "naziv": "IT pojmovi",
+      "opis": "Pojmovi iz programiranja i veb razvoja. Pojmovi se citaju iz ovog JSON fajla.",
+      "emoji": "🧩",
+      "boja": "#A78BFA",
+      "izvor": {
+        "tip": "json",
+        "naziv": "Lokalni JSON paket"
+      },
+      "rezervniPojmovi": [
+        {
+          "id": "promenljiva",
+          "naziv": "Promenljiva",
+          "emoji": "📦"
+        },
+        {
+          "id": "funkcija",
+          "naziv": "Funkcija",
+          "emoji": "⚙️"
+        },
+        {
+          "id": "petlja",
+          "naziv": "Petlja",
+          "emoji": "🔁"
+        },
+        {
+          "id": "uslov",
+          "naziv": "Uslov",
+          "emoji": "🔀"
+        },
+        {
+          "id": "niz",
+          "naziv": "Niz",
+          "emoji": "📚"
+        },
+        {
+          "id": "objekat",
+          "naziv": "Objekat",
+          "emoji": "🧱"
+        },
+        {
+          "id": "klasa",
+          "naziv": "Klasa",
+          "emoji": "🏛️"
+        },
+        {
+          "id": "interfejs",
+          "naziv": "Interfejs",
+          "emoji": "🔌"
+        },
+        {
+          "id": "komponenta",
+          "naziv": "Komponenta",
+          "emoji": "🧩"
+        },
+        {
+          "id": "ruta",
+          "naziv": "Ruta",
+          "emoji": "🗺️"
+        },
+        {
+          "id": "kuka",
+          "naziv": "Kuka",
+          "emoji": "🪝"
+        },
+        {
+          "id": "stanje",
+          "naziv": "Stanje",
+          "emoji": "💾"
+        },
+        {
+          "id": "svojstvo",
+          "naziv": "Svojstvo",
+          "emoji": "🏷️"
+        },
+        {
+          "id": "dogadjaj",
+          "naziv": "Dogadjaj",
+          "emoji": "🖱️"
+        },
+        {
+          "id": "zahtev",
+          "naziv": "Zahtev",
+          "emoji": "📡"
+        },
+        {
+          "id": "odgovor",
+          "naziv": "Odgovor",
+          "emoji": "📨"
+        },
+        {
+          "id": "server",
+          "naziv": "Server",
+          "emoji": "🖥️"
+        },
+        {
+          "id": "klijent",
+          "naziv": "Klijent",
+          "emoji": "💻"
+        },
+        {
+          "id": "baza",
+          "naziv": "Baza",
+          "emoji": "🗄️"
+        },
+        {
+          "id": "tabela",
+          "naziv": "Tabela",
+          "emoji": "📊"
+        },
+        {
+          "id": "kljuc",
+          "naziv": "Kljuc",
+          "emoji": "🔑"
+        },
+        {
+          "id": "token",
+          "naziv": "Token",
+          "emoji": "🎫"
+        },
+        {
+          "id": "kes",
+          "naziv": "Kes",
+          "emoji": "⚡"
+        },
+        {
+          "id": "modul",
+          "naziv": "Modul",
+          "emoji": "🗂️"
+        },
+        {
+          "id": "paket",
+          "naziv": "Paket",
+          "emoji": "📦"
+        },
+        {
+          "id": "grana",
+          "naziv": "Grana",
+          "emoji": "🌿"
+        },
+        {
+          "id": "komit",
+          "naziv": "Komit",
+          "emoji": "📝"
+        },
+        {
+          "id": "spajanje",
+          "naziv": "Spajanje",
+          "emoji": "🔀"
+        },
+        {
+          "id": "test",
+          "naziv": "Test",
+          "emoji": "✅"
+        },
+        {
+          "id": "greska",
+          "naziv": "Greska",
+          "emoji": "🐞"
+        },
+        {
+          "id": "verzija",
+          "naziv": "Verzija",
+          "emoji": "🔢"
+        },
+        {
+          "id": "skladiste",
+          "naziv": "Skladiste",
+          "emoji": "🗃️"
+        }
+      ]
+    }
+  ],
+  "nivoi": [
+    {
+      "id": "psi-4x4",
+      "naziv": "Psi · 4×4",
+      "paket": "psi",
+      "tabla": {
+        "kolone": 4,
+        "redovi": 4
+      },
+      "parova": 8,
+      "tezina": "lako",
+      "zakljucan": false,
+      "otkljucavaSe": null,
+      "procenjenoTrajanjeSek": 180
+    },
+    {
+      "id": "psi-6x6",
+      "naziv": "Psi · 6×6",
+      "paket": "psi",
+      "tabla": {
+        "kolone": 6,
+        "redovi": 6
+      },
+      "parova": 18,
+      "tezina": "srednje",
+      "zakljucan": true,
+      "otkljucavaSe": "psi-4x4",
+      "procenjenoTrajanjeSek": 330
+    },
+    {
+      "id": "psi-8x8",
+      "naziv": "Psi · 8×8",
+      "paket": "psi",
+      "tabla": {
+        "kolone": 8,
+        "redovi": 8
+      },
+      "parova": 32,
+      "tezina": "tesko",
+      "zakljucan": true,
+      "otkljucavaSe": "psi-6x6",
+      "procenjenoTrajanjeSek": 600
+    },
+    {
+      "id": "pokemoni-4x4",
+      "naziv": "Pokemoni · 4×4",
+      "paket": "pokemoni",
+      "tabla": {
+        "kolone": 4,
+        "redovi": 4
+      },
+      "parova": 8,
+      "tezina": "lako",
+      "zakljucan": false,
+      "otkljucavaSe": null,
+      "procenjenoTrajanjeSek": 180
+    },
+    {
+      "id": "pokemoni-6x6",
+      "naziv": "Pokemoni · 6×6",
+      "paket": "pokemoni",
+      "tabla": {
+        "kolone": 6,
+        "redovi": 6
+      },
+      "parova": 18,
+      "tezina": "srednje",
+      "zakljucan": true,
+      "otkljucavaSe": "pokemoni-4x4",
+      "procenjenoTrajanjeSek": 330
+    },
+    {
+      "id": "pokemoni-8x8",
+      "naziv": "Pokemoni · 8×8",
+      "paket": "pokemoni",
+      "tabla": {
+        "kolone": 8,
+        "redovi": 8
+      },
+      "parova": 32,
+      "tezina": "tesko",
+      "zakljucan": true,
+      "otkljucavaSe": "pokemoni-6x6",
+      "procenjenoTrajanjeSek": 600
+    },
+    {
+      "id": "zastave-4x4",
+      "naziv": "Zastave · 4×4",
+      "paket": "zastave",
+      "tabla": {
+        "kolone": 4,
+        "redovi": 4
+      },
+      "parova": 8,
+      "tezina": "lako",
+      "zakljucan": false,
+      "otkljucavaSe": null,
+      "procenjenoTrajanjeSek": 180
+    },
+    {
+      "id": "zastave-6x6",
+      "naziv": "Zastave · 6×6",
+      "paket": "zastave",
+      "tabla": {
+        "kolone": 6,
+        "redovi": 6
+      },
+      "parova": 18,
+      "tezina": "srednje",
+      "zakljucan": true,
+      "otkljucavaSe": "zastave-4x4",
+      "procenjenoTrajanjeSek": 330
+    },
+    {
+      "id": "zastave-8x8",
+      "naziv": "Zastave · 8×8",
+      "paket": "zastave",
+      "tabla": {
+        "kolone": 8,
+        "redovi": 8
+      },
+      "parova": 32,
+      "tezina": "tesko",
+      "zakljucan": true,
+      "otkljucavaSe": "zastave-6x6",
+      "procenjenoTrajanjeSek": 600
+    },
+    {
+      "id": "voce-4x4",
+      "naziv": "Voce i povrce · 4×4",
+      "paket": "voce",
+      "tabla": {
+        "kolone": 4,
+        "redovi": 4
+      },
+      "parova": 8,
+      "tezina": "lako",
+      "zakljucan": false,
+      "otkljucavaSe": null,
+      "procenjenoTrajanjeSek": 180
+    },
+    {
+      "id": "voce-6x6",
+      "naziv": "Voce i povrce · 6×6",
+      "paket": "voce",
+      "tabla": {
+        "kolone": 6,
+        "redovi": 6
+      },
+      "parova": 18,
+      "tezina": "srednje",
+      "zakljucan": true,
+      "otkljucavaSe": "voce-4x4",
+      "procenjenoTrajanjeSek": 330
+    },
+    {
+      "id": "voce-8x8",
+      "naziv": "Voce i povrce · 8×8",
+      "paket": "voce",
+      "tabla": {
+        "kolone": 8,
+        "redovi": 8
+      },
+      "parova": 32,
+      "tezina": "tesko",
+      "zakljucan": true,
+      "otkljucavaSe": "voce-6x6",
+      "procenjenoTrajanjeSek": 600
+    },
+    {
+      "id": "zivotinje-4x4",
+      "naziv": "Zivotinje · 4×4",
+      "paket": "zivotinje",
+      "tabla": {
+        "kolone": 4,
+        "redovi": 4
+      },
+      "parova": 8,
+      "tezina": "lako",
+      "zakljucan": false,
+      "otkljucavaSe": null,
+      "procenjenoTrajanjeSek": 180
+    },
+    {
+      "id": "zivotinje-6x6",
+      "naziv": "Zivotinje · 6×6",
+      "paket": "zivotinje",
+      "tabla": {
+        "kolone": 6,
+        "redovi": 6
+      },
+      "parova": 18,
+      "tezina": "srednje",
+      "zakljucan": true,
+      "otkljucavaSe": "zivotinje-4x4",
+      "procenjenoTrajanjeSek": 330
+    },
+    {
+      "id": "zivotinje-8x8",
+      "naziv": "Zivotinje · 8×8",
+      "paket": "zivotinje",
+      "tabla": {
+        "kolone": 8,
+        "redovi": 8
+      },
+      "parova": 32,
+      "tezina": "tesko",
+      "zakljucan": true,
+      "otkljucavaSe": "zivotinje-6x6",
+      "procenjenoTrajanjeSek": 600
+    },
+    {
+      "id": "it-4x4",
+      "naziv": "IT pojmovi · 4×4",
+      "paket": "it",
+      "tabla": {
+        "kolone": 4,
+        "redovi": 4
+      },
+      "parova": 8,
+      "tezina": "lako",
+      "zakljucan": false,
+      "otkljucavaSe": null,
+      "procenjenoTrajanjeSek": 180
+    },
+    {
+      "id": "it-6x6",
+      "naziv": "IT pojmovi · 6×6",
+      "paket": "it",
+      "tabla": {
+        "kolone": 6,
+        "redovi": 6
+      },
+      "parova": 18,
+      "tezina": "srednje",
+      "zakljucan": true,
+      "otkljucavaSe": "it-4x4",
+      "procenjenoTrajanjeSek": 330
+    },
+    {
+      "id": "it-8x8",
+      "naziv": "IT pojmovi · 8×8",
+      "paket": "it",
+      "tabla": {
+        "kolone": 8,
+        "redovi": 8
+      },
+      "parova": 32,
+      "tezina": "tesko",
+      "zakljucan": true,
+      "otkljucavaSe": "it-6x6",
+      "procenjenoTrajanjeSek": 600
+    }
+  ]
+}
