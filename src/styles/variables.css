@@ -1,0 +1,95 @@
+/* ============================================================
+   Dizajn tokeni — preuzeti iz Figma fajla "KTEH · Memorija"
+   (kolekcija "Boje", mere i tekst stilovi sa strane 01 · Dizajn sistem)
+   Promena vrednosti ovde menja izgled cele aplikacije.
+   ============================================================ */
+
+:root {
+  /* --- pozadine --- */
+  --pozadina-osnovna: #0A0E1C;
+  --pozadina-povrsina: #131A30;
+  --pozadina-izdignuta: #1B2444;
+  --pozadina-uneseno: #0F1526;
+
+  /* --- ivice --- */
+  --ivica-tanka: #1E2A52;
+  --ivica-jaka: #2E3C6E;
+
+  /* --- akcenti --- */
+  --akcenat-ljubicasta: #8B5CF6;
+  --akcenat-ljubicasta-tamna: #6B3ED9;
+  --akcenat-ljubicasta-svetla: #A78BFA;
+  --akcenat-tirkizna: #22D3EE;
+  --akcenat-tirkizna-tamna: #0E7F9C;
+  --akcenat-tirkizna-svetla: #67E8F9;
+
+  /* --- status --- */
+  --status-uspeh: #34D399;
+  --status-uspeh-tamna: #14866A;
+  --status-upozorenje: #FBBF24;
+  --status-upozorenje-tamna: #F2721F;
+  --status-greska: #F87171;
+  --status-greska-tamna: #B93B3B;
+
+  /* --- tekst --- */
+  --tekst-primarni: #F5F5F5;
+  --tekst-sekundarni: #A9B4CE;
+  --tekst-prigusen: #6B7799;
+
+  /* --- igraci --- */
+  --igrac-prvi: #8B5CF6;
+  --igrac-drugi: #22D3EE;
+
+  /* --- gradijenti --- */
+  --gradijent-ljubicasti: linear-gradient(135deg, #6B3ED9, #8B5CF6);
+  --gradijent-tirkizni: linear-gradient(135deg, #0E7F9C, #22D3EE);
+  --gradijent-akcenat: linear-gradient(135deg, #8B5CF6, #22D3EE);
+
+  /* --- mere (razmaci) --- */
+  --razmak-1: 4px;
+  --razmak-2: 8px;
+  --razmak-3: 12px;
+  --razmak-4: 16px;
+  --razmak-5: 20px;
+  --razmak-6: 24px;
+  --razmak-8: 32px;
+  --razmak-10: 40px;
+  --razmak-12: 48px;
+  --razmak-16: 64px;
+
+  /* --- radijusi --- */
+  --radijus-s: 8px;
+  --radijus-m: 12px;
+  --radijus-l: 16px;
+  --radijus-xl: 24px;
+  --radijus-pun: 999px;
+
+  /* --- tipografija --- */
+  --font-osnovni: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
+
+  --slova-xs: 12px;
+  --slova-s: 13px;
+  --slova-m: 15px;
+  --slova-l: 18px;
+  --slova-naslov-s: 20px;
+  --slova-naslov-m: 24px;
+  --slova-naslov-l: 32px;
+  --slova-naslov-xl: 40px;
+
+  --debljina-obicna: 400;
+  --debljina-srednja: 500;
+  --debljina-polu: 600;
+  --debljina-debela: 700;
+  --debljina-vrlo-debela: 800;
+
+  /* --- senke i sjaj --- */
+  --senka-s: 0 2px 8px rgba(0, 0, 0, 0.35);
+  --senka-m: 0 8px 24px rgba(0, 0, 0, 0.45);
+  --senka-l: 0 18px 48px rgba(0, 0, 0, 0.55);
+  --sjaj-ljubicasti: 0 0 24px rgba(139, 92, 246, 0.35);
+  --sjaj-tirkizni: 0 0 24px rgba(34, 211, 238, 0.32);
+
+  /* --- ostalo --- */
+  --sirina-sadrzaja: 1200px;
+  --prelaz: 160ms ease;
+}

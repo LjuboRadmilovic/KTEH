@@ -1,0 +1,118 @@
+@import "./variables.css";
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  background-color: var(--pozadina-osnovna);
+  background-image:
+    radial-gradient(760px 420px at 10% -6%, rgba(139, 92, 246, 0.16), transparent 62%),
+    radial-gradient(680px 380px at 92% 0%, rgba(34, 211, 238, 0.11), transparent 60%);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  color: var(--tekst-primarni);
+  font-family: var(--font-osnovni);
+  font-size: var(--slova-m);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4 {
+  margin: 0;
+  line-height: 1.2;
+  text-wrap: balance;
+}
+
+h1 { font-size: var(--slova-naslov-xl); font-weight: var(--debljina-vrlo-debela); letter-spacing: -0.02em; }
+h2 { font-size: var(--slova-naslov-l); font-weight: var(--debljina-debela); letter-spacing: -0.01em; }
+h3 { font-size: var(--slova-naslov-m); font-weight: var(--debljina-polu); }
+h4 { font-size: var(--slova-naslov-s); font-weight: var(--debljina-polu); }
+
+p { margin: 0; }
+
+a { color: var(--akcenat-tirkizna); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+img { max-width: 100%; display: block; }
+
+:focus-visible {
+  outline: 2px solid var(--akcenat-tirkizna);
+  outline-offset: 2px;
+  border-radius: var(--radijus-s);
+}
+
+/* ---- zajednicki omotac stranice ---- */
+.ljuska {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
+
+.ljuska__sadrzaj {
+  flex: 1;
+  width: 100%;
+  max-width: var(--sirina-sadrzaja);
+  margin: 0 auto;
+  padding: var(--razmak-10) var(--razmak-6) var(--razmak-16);
+}
+
+/* ---- zaglavlje stranice ---- */
+.zaglavlje-strane {
+  display: flex;
+  flex-direction: column;
+  gap: var(--razmak-2);
+  margin-bottom: var(--razmak-8);
+}
+
+.zaglavlje-strane__nadnaslov {
+  font-size: var(--slova-xs);
+  font-weight: var(--debljina-polu);
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--akcenat-tirkizna);
+}
+
+.zaglavlje-strane__opis {
+  color: var(--tekst-sekundarni);
+  max-width: 68ch;
+}
+
+/* ---- panel ---- */
+.panel {
+  background: var(--pozadina-povrsina);
+  border: 1px solid var(--ivica-tanka);
+  border-radius: var(--radijus-l);
+  padding: var(--razmak-6);
+}
+
+/* ---- poruka o praznom stanju ---- */
+.prazno {
+  border: 1px dashed var(--ivica-jaka);
+  border-radius: var(--radijus-l);
+  padding: var(--razmak-10);
+  text-align: center;
+  color: var(--tekst-prigusen);
+}
+
+@media (max-width: 768px) {
+  h1 { font-size: 30px; }
+  h2 { font-size: 24px; }
+  .ljuska__sadrzaj { padding: var(--razmak-6) var(--razmak-4) var(--razmak-12); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    transition-duration: 0.001ms !important;
+  }
+}
