@@ -1,0 +1,24 @@
+.podnozje {
+  border-top: 1px solid var(--ivica-tanka);
+  background: rgba(10, 14, 28, 0.6);
+}
+
+.podnozje__omotac {
+  max-width: var(--sirina-sadrzaja);
+  margin: 0 auto;
+  padding: var(--razmak-6);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--razmak-4);
+  flex-wrap: wrap;
+  font-size: var(--slova-s);
+  color: var(--tekst-prigusen);
+}
+
+.podnozje__izvori a { color: var(--tekst-sekundarni); }
+.podnozje__izvori a:hover { color: var(--akcenat-tirkizna); }
+
+@media (max-width: 768px) {
+  .podnozje__omotac { padding: var(--razmak-6) var(--razmak-4); }
+}
