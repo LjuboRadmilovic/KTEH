@@ -1,0 +1,12 @@
+.tabla {
+  display: grid;
+  grid-template-columns: repeat(var(--kolone, 4), minmax(0, 1fr));
+  gap: clamp(6px, 1vw, 12px);
+  width: 100%;
+  max-width: calc(var(--kolone, 4) * var(--osnova-kartice, 118px));
+  margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+  .tabla { max-width: 100%; gap: 6px; }
+}

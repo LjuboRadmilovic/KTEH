@@ -1,0 +1,61 @@
+.igrac {
+  background: var(--pozadina-povrsina);
+  border: 1px solid var(--ivica-tanka);
+  border-radius: var(--radijus-l);
+  padding: var(--razmak-4) var(--razmak-5);
+  display: flex;
+  flex-direction: column;
+  gap: var(--razmak-2);
+  transition: border-color var(--prelaz), box-shadow var(--prelaz);
+}
+
+.igrac__zaglavlje {
+  display: flex;
+  align-items: center;
+  gap: var(--razmak-2);
+  flex-wrap: wrap;
+}
+
+.igrac__ime {
+  font-weight: var(--debljina-polu);
+  font-size: var(--slova-l);
+}
+
+.igrac__oznaka {
+  font-size: 10px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 3px 8px;
+  border-radius: var(--radijus-pun);
+  background: rgba(139, 92, 246, 0.18);
+  color: var(--akcenat-ljubicasta-svetla);
+}
+
+.igrac--drugi .igrac__oznaka {
+  background: rgba(34, 211, 238, 0.16);
+  color: var(--akcenat-tirkizna-svetla);
+}
+
+.igrac__oznaka--pobednik {
+  background: rgba(52, 211, 153, 0.16);
+  color: var(--status-uspeh);
+}
+
+.igrac__brojevi { display: flex; align-items: baseline; gap: var(--razmak-3); }
+
+.igrac__pogodaka {
+  font-size: 34px;
+  font-weight: var(--debljina-vrlo-debela);
+  line-height: 1;
+  font-variant-numeric: tabular-nums;
+}
+
+.igrac--prvi .igrac__pogodaka { color: var(--igrac-prvi); }
+.igrac--drugi .igrac__pogodaka { color: var(--igrac-drugi); }
+
+.igrac__poteza { font-size: var(--slova-s); color: var(--tekst-prigusen); }
+
+.igrac--na-potezu.igrac--prvi { border-color: var(--igrac-prvi); box-shadow: var(--sjaj-ljubicasti); }
+.igrac--na-potezu.igrac--drugi { border-color: var(--igrac-drugi); box-shadow: var(--sjaj-tirkizni); }
+
+.igrac--pobednik { border-color: var(--status-uspeh); box-shadow: 0 0 24px rgba(52, 211, 153, 0.28); }
