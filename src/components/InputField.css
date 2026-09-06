@@ -1,0 +1,41 @@
+.polje {
+  display: flex;
+  flex-direction: column;
+  gap: var(--razmak-2);
+}
+
+.polje__oznaka {
+  font-size: var(--slova-s);
+  font-weight: var(--debljina-srednja);
+  color: var(--tekst-sekundarni);
+}
+
+.polje__unos {
+  background: var(--pozadina-uneseno);
+  border: 1px solid var(--ivica-tanka);
+  border-radius: var(--radijus-m);
+  padding: 11px 14px;
+  color: var(--tekst-primarni);
+  font-family: var(--font-osnovni);
+  font-size: var(--slova-m);
+  transition: border-color var(--prelaz), box-shadow var(--prelaz);
+  width: 100%;
+}
+
+.polje__unos::placeholder { color: var(--tekst-prigusen); }
+
+.polje__unos:focus {
+  outline: none;
+  border-color: var(--akcenat-ljubicasta);
+  box-shadow: 0 0 0 3px rgba(139, 92, 246, 0.18);
+}
+
+.polje--greska .polje__unos {
+  border-color: var(--status-greska);
+}
+.polje--greska .polje__unos:focus {
+  box-shadow: 0 0 0 3px rgba(248, 113, 113, 0.18);
+}
+
+.polje__greska { font-size: var(--slova-s); color: var(--status-greska); }
+.polje__pomoc  { font-size: var(--slova-s); color: var(--tekst-prigusen); }

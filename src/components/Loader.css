@@ -1,0 +1,24 @@
+.ucitavanje {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--razmak-4);
+  padding: var(--razmak-12) var(--razmak-4);
+  color: var(--tekst-sekundarni);
+}
+
+.ucitavanje__krug {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  border: 3px solid var(--ivica-tanka);
+  border-top-color: var(--akcenat-ljubicasta);
+  border-right-color: var(--akcenat-tirkizna);
+  animation: ucitavanje-okret 900ms linear infinite;
+}
+
+.ucitavanje__tekst { font-size: var(--slova-s); }
+
+@keyframes ucitavanje-okret {
+  to { transform: rotate(360deg); }
+}
