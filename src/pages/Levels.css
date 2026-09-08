@@ -1,0 +1,9 @@
+.nivoi__mreza {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(268px, 1fr));
+  gap: var(--razmak-5);
+}
+
+@media (max-width: 640px) {
+  .nivoi__mreza { grid-template-columns: 1fr; }
+}
