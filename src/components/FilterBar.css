@@ -1,0 +1,69 @@
+.filteri {
+  background: var(--pozadina-povrsina);
+  border: 1px solid var(--ivica-tanka);
+  border-radius: var(--radijus-l);
+  padding: var(--razmak-5);
+  display: flex;
+  flex-direction: column;
+  gap: var(--razmak-4);
+  margin-bottom: var(--razmak-6);
+}
+
+.filteri__grupa { display: flex; align-items: center; gap: var(--razmak-4); flex-wrap: wrap; }
+
+.filteri__naziv {
+  font-size: 10px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--tekst-prigusen);
+  min-width: 62px;
+}
+
+.filteri__pilule { display: flex; gap: var(--razmak-2); flex-wrap: wrap; }
+
+.pilula {
+  padding: 6px 14px;
+  border: 1px solid var(--ivica-tanka);
+  border-radius: var(--radijus-pun);
+  background: var(--pozadina-uneseno);
+  color: var(--tekst-sekundarni);
+  font-family: var(--font-osnovni);
+  font-size: var(--slova-s);
+  cursor: pointer;
+  transition: border-color var(--prelaz), color var(--prelaz), background var(--prelaz);
+}
+
+.pilula:hover { color: var(--tekst-primarni); border-color: var(--ivica-jaka); }
+
+.pilula--aktivna {
+  background: rgba(139, 92, 246, 0.16);
+  border-color: var(--akcenat-ljubicasta);
+  color: var(--tekst-primarni);
+  font-weight: var(--debljina-srednja);
+}
+
+.filteri__dno {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--razmak-3);
+  padding-top: var(--razmak-3);
+  border-top: 1px solid var(--ivica-tanka);
+}
+
+.filteri__rezultat { font-size: var(--slova-s); color: var(--tekst-prigusen); }
+
+.filteri__ponisti {
+  border: 0;
+  background: none;
+  color: var(--akcenat-tirkizna);
+  font-family: var(--font-osnovni);
+  font-size: var(--slova-s);
+  cursor: pointer;
+  padding: 0;
+}
+.filteri__ponisti:hover { text-decoration: underline; }
+
+@media (max-width: 640px) {
+  .filteri__grupa { align-items: flex-start; flex-direction: column; gap: var(--razmak-2); }
+}

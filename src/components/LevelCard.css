@@ -1,0 +1,74 @@
+.nivo-kartica {
+  display: flex;
+  flex-direction: column;
+  background: var(--pozadina-povrsina);
+  border: 1px solid var(--ivica-tanka);
+  border-radius: var(--radijus-l);
+  overflow: hidden;
+  text-decoration: none;
+  color: inherit;
+  transition: transform var(--prelaz), border-color var(--prelaz), box-shadow var(--prelaz);
+}
+
+a.nivo-kartica:hover {
+  transform: translateY(-2px);
+  border-color: var(--akcenat-ljubicasta);
+  box-shadow: var(--senka-m);
+  text-decoration: none;
+}
+
+.nivo-kartica--zakljucana { opacity: 0.55; }
+
+.nivo-kartica__slika {
+  height: 96px;
+  display: grid;
+  place-items: center;
+  font-size: 40px;
+}
+
+.nivo-kartica__telo {
+  padding: var(--razmak-4) var(--razmak-5) var(--razmak-5);
+  display: flex;
+  flex-direction: column;
+  gap: var(--razmak-2);
+  flex: 1;
+}
+
+.nivo-kartica__vrh { display: flex; align-items: center; justify-content: space-between; gap: var(--razmak-2); }
+
+.nivo-kartica__naslov { font-size: var(--slova-l); font-weight: var(--debljina-polu); }
+
+.nivo-kartica__tezina {
+  font-size: 10px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  border: 1px solid;
+  border-radius: var(--radijus-pun);
+  padding: 2px 9px;
+  white-space: nowrap;
+}
+
+.nivo-kartica__paket { font-size: var(--slova-s); color: var(--tekst-prigusen); }
+
+.nivo-kartica__podaci {
+  display: flex;
+  gap: var(--razmak-3);
+  font-size: var(--slova-s);
+  color: var(--tekst-sekundarni);
+  margin-top: auto;
+  padding-top: var(--razmak-3);
+  flex-wrap: wrap;
+}
+
+.nivo-kartica__oznaka {
+  align-self: flex-start;
+  font-size: 10px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--status-uspeh);
+  background: rgba(52, 211, 153, 0.12);
+  border-radius: var(--radijus-pun);
+  padding: 3px 9px;
+}
+
+.nivo-kartica__zakljucan { font-size: var(--slova-s); color: var(--tekst-prigusen); }

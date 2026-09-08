@@ -1,0 +1,40 @@
+.paginacija {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--razmak-1);
+  margin-top: var(--razmak-8);
+}
+
+.paginacija__broj,
+.paginacija__strelica {
+  min-width: 38px;
+  height: 38px;
+  padding: 0 10px;
+  border: 1px solid var(--ivica-tanka);
+  border-radius: var(--radijus-s);
+  background: var(--pozadina-povrsina);
+  color: var(--tekst-sekundarni);
+  font-family: var(--font-osnovni);
+  font-size: var(--slova-s);
+  font-variant-numeric: tabular-nums;
+  cursor: pointer;
+  transition: border-color var(--prelaz), color var(--prelaz), background var(--prelaz);
+}
+
+.paginacija__broj:hover:not(:disabled),
+.paginacija__strelica:hover:not(:disabled) {
+  color: var(--tekst-primarni);
+  border-color: var(--akcenat-ljubicasta);
+}
+
+.paginacija__broj--aktivan {
+  background: var(--gradijent-ljubicasti);
+  border-color: transparent;
+  color: #fff;
+  font-weight: var(--debljina-polu);
+}
+
+.paginacija__strelica:disabled { opacity: 0.35; cursor: not-allowed; }
+
+.paginacija__razmak { color: var(--tekst-prigusen); padding: 0 4px; }
