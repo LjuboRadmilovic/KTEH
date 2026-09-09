@@ -1,0 +1,70 @@
+.istorija__tabela-omotac {
+  border: 1px solid var(--ivica-tanka);
+  border-radius: var(--radijus-l);
+  overflow-x: auto;
+  background: var(--pozadina-povrsina);
+}
+
+.istorija__tabela {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 720px;
+  font-size: var(--slova-s);
+}
+
+.istorija__tabela th {
+  text-align: left;
+  padding: var(--razmak-3) var(--razmak-4);
+  background: var(--pozadina-uneseno);
+  border-bottom: 1px solid var(--ivica-tanka);
+  font-size: 10px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--tekst-prigusen);
+  font-weight: var(--debljina-srednja);
+  white-space: nowrap;
+}
+
+.istorija__tabela td {
+  padding: var(--razmak-3) var(--razmak-4);
+  border-bottom: 1px solid rgba(30, 42, 82, 0.6);
+  vertical-align: middle;
+}
+
+.istorija__tabela tr:last-child td { border-bottom: 0; }
+.istorija__tabela tbody tr:hover { background: rgba(139, 92, 246, 0.06); }
+
+.istorija__brojevi { font-variant-numeric: tabular-nums; color: var(--tekst-sekundarni); }
+
+.ishod {
+  display: inline-block;
+  font-size: 10px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 3px 9px;
+  border-radius: var(--radijus-pun);
+  white-space: nowrap;
+}
+.ishod--pobeda { background: rgba(52, 211, 153, 0.14); color: var(--status-uspeh); }
+.ishod--nereseno { background: rgba(251, 191, 36, 0.14); color: var(--status-upozorenje); }
+
+.istorija__alatke {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--razmak-4);
+  flex-wrap: wrap;
+  margin-bottom: var(--razmak-4);
+}
+
+.istorija__sortiranje { display: flex; align-items: center; gap: var(--razmak-2); }
+
+.istorija__izbor {
+  background: var(--pozadina-uneseno);
+  border: 1px solid var(--ivica-tanka);
+  border-radius: var(--radijus-m);
+  color: var(--tekst-primarni);
+  font-family: var(--font-osnovni);
+  font-size: var(--slova-s);
+  padding: 8px 12px;
+}
