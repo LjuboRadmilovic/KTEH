@@ -1,9 +1,9 @@
 import type { Pojam } from '../types';
 
 /**
- * Ugovor za izvor pojmova na karticama.
- * Implementiraju ga LocalDeckProvider (JSON fajl), DogDeckProvider (Dog CEO API)
- * i PokemonDeckProvider (PokeAPI) — igra ne zna odakle pojmovi zaista dolaze.
+ * Ugovor za izvor pojmova na karticama. Implementiraju ga cetiri klase:
+ * LocalDeckProvider (lokalni JSON), DogDeckProvider (Dog CEO), PokemonDeckProvider
+ * (PokeAPI) i FlagDeckProvider (REST Countries). Igra ne zna odakle pojmovi dolaze.
  */
 export interface IDeckProvider {
   /** id paketa iz classic-pack.json ("psi", "pokemoni", "zastave"...) */

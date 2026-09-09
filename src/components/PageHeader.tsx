@@ -7,7 +7,7 @@ interface PageHeaderProps {
   akcija?: ReactNode;
 }
 
-/** Zaglavlje stranice — nadnaslov, naslov, opis i opciono dugme sa desne strane. */
+/** Zaglavlje stranice: nadnaslov, naslov, opis i po potrebi dugme sa desne strane. */
 export default function PageHeader({ nadnaslov, naslov, opis, akcija }: PageHeaderProps) {
   return (
     <div className="zaglavlje-strane">

@@ -2,7 +2,7 @@ import type { Karta, RezultatIgraca, StanjeIgre } from '../types';
 
 /**
  * Ugovor za jezgro igre. Klasa MemoryGame ga implementira, a hook useGame
- * radi iskljucivo preko ovog interfejsa — tako se jezgro moze zameniti
+ * radi iskljucivo preko ovog interfejsa, pa se jezgro moze zameniti
  * (npr. varijantom za jednog igraca) bez diranja komponenti.
  */
 export interface IGameEngine {

@@ -8,7 +8,7 @@ import type { Nivo, Paket, Partija, Pojam, PravilaIgre } from '../models/types';
  * Spaja klasu MemoryGame sa React-om.
  *
  * Klasa menja svoje stanje u mestu, pa se posle svakog poziva podize brojac
- * "verzija" — to je znak React-u da ponovo iscrta tablu.
+ * "verzija". To je znak React-u da ponovo iscrta tablu.
  */
 export function useGame(nivoId: string | undefined) {
   const igraRef = useRef<MemoryGame | null>(null);
@@ -84,7 +84,7 @@ export function useGame(nivoId: string | undefined) {
         pojmovi = await izvor.ucitajPojmove(nivo.parova);
         naziv = izvor.nazivIzvora;
       } catch {
-        // API nije odgovorio — partija se igra pojmovima iz lokalnog JSON-a
+        // API nije odgovorio, pa partija ide sa pojmovima iz lokalnog JSON-a
         try {
           const rezerva = napraviRezervniIzvor(paket);
           pojmovi = await rezerva.ucitajPojmove(nivo.parova);
@@ -165,7 +165,8 @@ export function useGame(nivoId: string | undefined) {
       ukupnoPoteza: igra.ukupnoPoteza(),
       odigrana: new Date().toISOString(),
     };
-    // eslint-disable-next-line react-hooks/exhaustive-deps
+    // verzija je namerno u zavisnostima: klasa menja stanje u mestu, pa je
+    // brojac jedini znak da su rezultati novi
   }, [igra, jeKraj, nivo, sekundi, verzija]);
 
   return {

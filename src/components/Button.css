@@ -42,12 +42,6 @@
 }
 .dugme--sekundarno:not(:disabled):hover { border-color: var(--akcenat-ljubicasta); }
 
-.dugme--tiho {
-  background: transparent;
-  color: var(--tekst-sekundarni);
-}
-.dugme--tiho:not(:disabled):hover { color: var(--tekst-primarni); background: rgba(139, 92, 246, 0.1); }
-
 .dugme--opasno {
   background: transparent;
   border-color: var(--status-greska-tamna);

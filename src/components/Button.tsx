@@ -1,7 +1,7 @@
 import type { ButtonHTMLAttributes, ReactNode } from 'react';
 import './Button.css';
 
-export type VrstaDugmeta = 'primarno' | 'sekundarno' | 'tiho' | 'opasno';
+export type VrstaDugmeta = 'primarno' | 'sekundarno' | 'opasno';
 export type VelicinaDugmeta = 'malo' | 'srednje' | 'veliko';
 
 interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {

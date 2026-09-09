@@ -89,7 +89,7 @@ export class MemoryGame implements IGameEngine {
 
     karta.okrenuta = true;
 
-    // prva karta u potezu — samo se pamti
+    // prva karta u potezu, samo se pamti
     if (this.prvaOtvorena === null) {
       this.prvaOtvorena = karta.id;
       return true;
@@ -171,7 +171,7 @@ export class MemoryGame implements IGameEngine {
     return sNajboljim.length === 1 ? sNajboljim[0].redniBroj : null;
   }
 
-  /** Ukupan broj poteza svih igraca — ide u zapis partije. */
+  /** Ukupan broj poteza svih igraca; ide u zapis partije. */
   ukupnoPoteza(): number {
     return this.igraci.reduce((zbir, igrac) => zbir + igrac.poteza, 0);
   }

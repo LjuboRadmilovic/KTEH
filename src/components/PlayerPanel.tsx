@@ -7,7 +7,7 @@ interface PlayerPanelProps {
   pobednik?: boolean;
 }
 
-/** Kartica jednog igraca — ime, pogoci, potezi i oznaka da je na potezu. */
+/** Kartica jednog igraca: ime, pogoci, potezi i oznaka da je na potezu. */
 export default function PlayerPanel({ igrac, naPotezu, pobednik = false }: PlayerPanelProps) {
   const klase = [
     'igrac',

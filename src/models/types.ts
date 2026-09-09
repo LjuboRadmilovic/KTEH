@@ -23,7 +23,7 @@ export interface IzvorPaketa {
   kljucNijePotreban?: boolean;
 }
 
-/** Jedan pojam na kartici — ili emodzi, ili slika sa API-ja. */
+/** Jedan pojam na kartici: ili emodzi, ili slika sa API-ja. */
 export interface Pojam {
   id: string;
   naziv: string;

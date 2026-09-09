@@ -25,7 +25,7 @@ export default function Result() {
       <>
         <h1>Rezultat partije</h1>
         <p className="zaglavlje-strane__opis" style={{ marginTop: 'var(--razmak-3)' }}>
-          Nema podataka o partiji — verovatno je stranica osvežena. Odigraj partiju da bi
+          Nema podataka o partiji, verovatno je stranica osvežena. Odigraj partiju da bi
           video rezultat.
         </p>
         <div style={{ marginTop: 'var(--razmak-6)' }}>

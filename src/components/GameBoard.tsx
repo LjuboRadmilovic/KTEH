@@ -9,7 +9,7 @@ interface GameBoardProps {
   onOkreni: (idKarte: string) => void;
 }
 
-/** Tabla — mreza kartica, broj kolona dolazi iz nivoa (4, 6 ili 8). */
+/** Tabla. Mreza kartica; broj kolona dolazi iz nivoa (4, 6 ili 8). */
 export default function GameBoard({ karte, kolone, zakljucana, onOkreni }: GameBoardProps) {
   return (
     <div

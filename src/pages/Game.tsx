@@ -47,7 +47,7 @@ export default function Game() {
       <div className="panel priprema">
         <h1>{igra.nivo?.naziv ?? 'Partija'}</h1>
         <p className="priprema__opis">
-          Unesite imena igrača. Igra se naizmenično — ko pogodi par, igra ponovo.
+          Unesite imena igrača. Igra se naizmenično, a ko pogodi par igra ponovo.
         </p>
 
         <form className="priprema__forma" onSubmit={pokreni}>
