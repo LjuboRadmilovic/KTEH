@@ -1,0 +1,46 @@
+.nalog {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: var(--razmak-8) var(--razmak-4);
+}
+
+.nalog__kartica {
+  width: 100%;
+  max-width: 420px;
+  background: var(--pozadina-povrsina);
+  border: 1px solid var(--ivica-tanka);
+  border-radius: var(--radijus-xl);
+  padding: var(--razmak-10) var(--razmak-8);
+  box-shadow: var(--senka-l);
+}
+
+.nalog__znak {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--razmak-2);
+  font-size: var(--slova-l);
+  font-weight: var(--debljina-debela);
+  color: var(--tekst-primarni);
+  text-decoration: none;
+  margin-bottom: var(--razmak-6);
+}
+.nalog__znak:hover { text-decoration: none; }
+
+.nalog__naslov { font-size: var(--slova-naslov-m); font-weight: var(--debljina-debela); margin-bottom: var(--razmak-2); }
+.nalog__opis { color: var(--tekst-sekundarni); font-size: var(--slova-s); margin-bottom: var(--razmak-8); }
+
+.nalog__forma { display: flex; flex-direction: column; gap: var(--razmak-5); }
+
+.nalog__dno {
+  margin-top: var(--razmak-6);
+  padding-top: var(--razmak-5);
+  border-top: 1px solid var(--ivica-tanka);
+  font-size: var(--slova-s);
+  color: var(--tekst-prigusen);
+  text-align: center;
+}
+
+@media (max-width: 480px) {
+  .nalog__kartica { padding: var(--razmak-8) var(--razmak-5); }
+}

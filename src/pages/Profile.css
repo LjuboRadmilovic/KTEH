@@ -1,0 +1,46 @@
+.profil__vrh {
+  display: flex;
+  align-items: center;
+  gap: var(--razmak-6);
+  margin-bottom: var(--razmak-8);
+  flex-wrap: wrap;
+}
+
+.profil__inicijal {
+  width: 84px;
+  height: 84px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  font-size: 34px;
+  font-weight: var(--debljina-vrlo-debela);
+  background: var(--gradijent-ljubicasti);
+  box-shadow: var(--sjaj-ljubicasti);
+  flex: 0 0 auto;
+}
+
+.profil__ime { font-size: var(--slova-naslov-l); font-weight: var(--debljina-vrlo-debela); }
+.profil__meta { color: var(--tekst-prigusen); font-size: var(--slova-s); }
+
+.profil__mreza {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--razmak-5);
+  align-items: start;
+}
+
+.profil__plocice {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--razmak-4);
+}
+
+.profil__forma { display: flex; flex-direction: column; gap: var(--razmak-4); margin-top: var(--razmak-4); }
+
+.profil__poruka { font-size: var(--slova-s); color: var(--status-uspeh); }
+
+.profil__odjava { margin-top: var(--razmak-8); }
+
+@media (max-width: 860px) {
+  .profil__mreza { grid-template-columns: 1fr; }
+}
