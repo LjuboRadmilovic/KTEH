@@ -1,0 +1,41 @@
+.statistika__plocice {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: var(--razmak-4);
+  margin-bottom: var(--razmak-8);
+}
+
+.statistika__grafikoni {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--razmak-5);
+}
+
+.grafikon {
+  /* bez ovoga canvas namece svoju sirinu i kolona mreze ne moze da se skupi */
+  min-width: 0;
+  background: var(--pozadina-povrsina);
+  border: 1px solid var(--ivica-tanka);
+  border-radius: var(--radijus-l);
+  padding: var(--razmak-5) var(--razmak-5) var(--razmak-4);
+  display: flex;
+  flex-direction: column;
+  gap: var(--razmak-4);
+}
+
+.grafikon--siroki { grid-column: 1 / -1; }
+
+.grafikon__naslov { font-size: var(--slova-l); font-weight: var(--debljina-polu); }
+.grafikon__opis { font-size: var(--slova-s); color: var(--tekst-prigusen); margin-top: 2px; }
+
+.grafikon__platno { position: relative; height: 260px; min-width: 0; }
+
+.statistika__napomena {
+  margin-top: var(--razmak-6);
+  font-size: var(--slova-s);
+  color: var(--tekst-prigusen);
+}
+
+@media (max-width: 900px) {
+  .statistika__grafikoni { grid-template-columns: 1fr; }
+}

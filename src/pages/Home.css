@@ -1,0 +1,80 @@
+.pocetna__uvod {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: var(--razmak-10);
+  align-items: center;
+  margin-bottom: var(--razmak-12);
+}
+
+.pocetna__naslov { margin-bottom: var(--razmak-4); }
+.pocetna__naslov span { background: var(--gradijent-akcenat); -webkit-background-clip: text; background-clip: text; color: transparent; }
+
+.pocetna__opis { color: var(--tekst-sekundarni); font-size: var(--slova-l); max-width: 54ch; margin-bottom: var(--razmak-8); }
+
+.pocetna__akcije { display: flex; gap: var(--razmak-3); flex-wrap: wrap; }
+
+.pocetna__vizual {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--razmak-3);
+}
+
+.pocetna__karta {
+  aspect-ratio: 3 / 4;
+  border-radius: var(--radijus-m);
+  border: 1px solid var(--ivica-tanka);
+  background: var(--pozadina-povrsina);
+  display: grid;
+  place-items: center;
+  font-size: 30px;
+}
+.pocetna__karta--otvorena {
+  background: var(--gradijent-ljubicasti);
+  border-color: transparent;
+  box-shadow: var(--sjaj-ljubicasti);
+}
+.pocetna__karta--tirkizna {
+  background: var(--gradijent-tirkizni);
+  border-color: transparent;
+  box-shadow: var(--sjaj-tirkizni);
+}
+
+.pocetna__odlike {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: var(--razmak-4);
+}
+
+.odlika__ikona { font-size: 26px; margin-bottom: var(--razmak-3); display: block; }
+.odlika__naslov { font-size: var(--slova-l); font-weight: var(--debljina-polu); margin-bottom: var(--razmak-2); }
+.odlika__opis { color: var(--tekst-sekundarni); font-size: var(--slova-s); }
+
+@media (max-width: 1024px) {
+  .pocetna__uvod { grid-template-columns: 1fr; gap: var(--razmak-8); }
+}
+
+/* ---- sazetak za prijavljenog korisnika ---- */
+.pocetna__nastavak {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--razmak-5);
+  flex-wrap: wrap;
+  background: var(--pozadina-povrsina);
+  border: 1px solid var(--ivica-tanka);
+  border-radius: var(--radijus-l);
+  padding: var(--razmak-5) var(--razmak-6);
+  margin-bottom: var(--razmak-8);
+}
+
+.pocetna__pozdrav { font-size: var(--slova-l); font-weight: var(--debljina-polu); }
+.pocetna__poslednja { font-size: var(--slova-s); color: var(--tekst-prigusen); margin-top: 2px; }
+
+.pocetna__brojevi {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: var(--razmak-4);
+  margin-bottom: var(--razmak-12);
+}
+
+.pocetna__naslov-odeljka { margin-bottom: var(--razmak-5); }
