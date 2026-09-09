@@ -1,0 +1,25 @@
+.plocica {
+  background: var(--pozadina-povrsina);
+  border: 1px solid var(--ivica-tanka);
+  border-radius: var(--radijus-l);
+  padding: var(--razmak-5);
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.plocica__vrednost {
+  font-size: 30px;
+  font-weight: var(--debljina-vrlo-debela);
+  line-height: 1.1;
+  font-variant-numeric: tabular-nums;
+}
+
+.plocica__oznaka {
+  font-size: 10px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--tekst-prigusen);
+}
+
+.plocica__opis { font-size: var(--slova-s); color: var(--tekst-sekundarni); margin-top: var(--razmak-2); }

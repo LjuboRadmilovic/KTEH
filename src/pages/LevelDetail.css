@@ -1,0 +1,58 @@
+.nivo__vrh {
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  gap: var(--razmak-8);
+  align-items: start;
+  margin-bottom: var(--razmak-8);
+}
+
+.nivo__znak {
+  aspect-ratio: 1;
+  border-radius: var(--radijus-xl);
+  display: grid;
+  place-items: center;
+  font-size: 72px;
+  border: 1px solid var(--ivica-tanka);
+}
+
+.nivo__opis { color: var(--tekst-sekundarni); margin: var(--razmak-4) 0 var(--razmak-6); max-width: 60ch; }
+
+.nivo__podaci {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: var(--razmak-4);
+  margin-bottom: var(--razmak-8);
+}
+
+.nivo__podatak {
+  background: var(--pozadina-povrsina);
+  border: 1px solid var(--ivica-tanka);
+  border-radius: var(--radijus-l);
+  padding: var(--razmak-4) var(--razmak-5);
+}
+
+.nivo__vrednost { font-size: 24px; font-weight: var(--debljina-debela); display: block; font-variant-numeric: tabular-nums; }
+.nivo__oznaka { font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--tekst-prigusen); }
+
+.nivo__prethodne { margin-top: var(--razmak-10); }
+.nivo__prethodne h3 { margin-bottom: var(--razmak-4); }
+
+.nivo__lista { display: flex; flex-direction: column; gap: var(--razmak-2); }
+
+.nivo__zapis {
+  display: flex;
+  justify-content: space-between;
+  gap: var(--razmak-4);
+  padding: var(--razmak-3) var(--razmak-4);
+  background: var(--pozadina-povrsina);
+  border: 1px solid var(--ivica-tanka);
+  border-radius: var(--radijus-m);
+  font-size: var(--slova-s);
+}
+
+.nivo__zapis span:last-child { color: var(--tekst-prigusen); font-variant-numeric: tabular-nums; }
+
+@media (max-width: 768px) {
+  .nivo__vrh { grid-template-columns: 1fr; gap: var(--razmak-5); }
+  .nivo__znak { max-width: 160px; }
+}
